@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+ int main(){
+    int arr[10];
+    int n = sizeof(arr);
+    cout << "Elements in array";
+    for(int i = 0; i < n ; i++){
+        cin >> arr[i];
+    }
+    int large = arr[0];
+    int secLarge = -1;
+    for(int j = 0; j < n; j++){
+        if(arr[j] > large){
+            large = arr[j];
+            secLarge = large;
+        }
+        else if(arr[j] < large && arr[j] > secLarge){
+            secLarge = arr[j];
+        }
+    }
+    cout << secLarge;
+
+ }
